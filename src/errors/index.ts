@@ -2,6 +2,11 @@ export class CustomError extends Error {
 	constructor(message = "Server Error", public statusCode = 500) {
 		super(message)
 	}
+
+	serialize(extended: boolean) {
+		if (extended) return { message: this.message, error: this.stack }
+		return { message: this.message }
+	}
 }
 
 export class BadRequestError extends CustomError {

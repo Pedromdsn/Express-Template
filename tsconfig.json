@@ -17,7 +17,7 @@
         "src/config"
       ],
       "@/errors": [
-        "src/utils/errors"
+        "src/errors"
       ],
       "@/libs/*": [
         "src/libs/*"
