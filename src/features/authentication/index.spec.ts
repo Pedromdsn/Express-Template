@@ -1,8 +1,8 @@
 import bcrypt from "bcrypt"
 import { Request } from "express"
 
-import { BadRequestError } from "@/errors"
 import { prismaMock } from "@/libs/prisma/mock"
+import { BadRequestError } from "@/utils/errors"
 import { jwt } from "@/utils/jwt"
 import { User } from "@prisma/client"
 

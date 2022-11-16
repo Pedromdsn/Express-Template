@@ -17,13 +17,13 @@
         "src/config"
       ],
       "@/errors": [
-        "src/errors"
+        "src/utils/errors"
       ],
       "@/libs/*": [
         "src/libs/*"
       ],
       "@/middlewares/*": [
-        "src/middlewares/*"
+        "src/controllers/@middlewares/*"
       ],
       "@/controllers/*": [
         "src/controllers/*"

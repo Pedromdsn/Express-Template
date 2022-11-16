@@ -2,8 +2,8 @@ import bcrypt from "bcrypt"
 import { Request } from "express"
 import { JwtPayload } from "jsonwebtoken"
 
-import { BadRequestError, UnauthorizedError } from "@/errors"
 import { prisma } from "@/libs/prisma"
+import { BadRequestError, UnauthorizedError } from "@/utils/errors"
 import { jwt } from "@/utils/jwt"
 import { User } from "@prisma/client"
 

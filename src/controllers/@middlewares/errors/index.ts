@@ -2,7 +2,7 @@ import { NextFunction, Request, Response } from "express"
 
 import config from "@/config"
 
-import { CustomError } from "../../errors"
+import { CustomError } from "../../../utils/errors"
 
 export const errorHandle = (err: TypeError | CustomError, req: Request, res: Response, _next: NextFunction) => {
 	if (err instanceof CustomError) {

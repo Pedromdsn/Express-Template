@@ -1,7 +1,7 @@
 import jsonwebtoken from "jsonwebtoken"
 
 import config from "@/config"
-import { ValidationError } from "@/errors"
+import { ValidationError } from "@/utils/errors"
 
 export const jwt = {
 	sign: (payload: { data: object }, options: jsonwebtoken.SignOptions = { expiresIn: "1d" }) => {
