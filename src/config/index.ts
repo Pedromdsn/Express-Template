@@ -1,11 +1,12 @@
 import "dotenv/config"
 
-import Env from "envalid"
+import Env, {cleanEnv, port, str, bool} from "envalid"
 
-const env = Env.cleanEnv(process.env, {
-	PORT: Env.port({ default: 3333 }),
-	JWT_SECRET: Env.str({ default: "secret123" }),
-	DEBUG: Env.bool({ default: false })
+
+const env = cleanEnv(process.env, {
+	PORT: port({ default: 3333 }),
+	JWT_SECRET: str({ default: "secret123" }),
+	DEBUG: bool({ default: false })
 })
 
 export default env

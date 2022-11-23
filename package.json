@@ -2,6 +2,7 @@
 	"private": true,
 	"scripts": {
 		"start": "ts-node src",
+		"build": "tsc",
 		"dev": "nodemon src/index.ts -q",
 		"test": "jest",
 		"test:cov": "jest --coverage",
