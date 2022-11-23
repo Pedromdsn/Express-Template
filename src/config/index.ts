@@ -1,6 +1,6 @@
 import "dotenv/config"
 
-import Env, {cleanEnv, port, str, bool} from "envalid"
+import _Env, {cleanEnv, port, str, bool} from "envalid"
 
 
 const env = cleanEnv(process.env, {
