@@ -1,12 +1,13 @@
 import "dotenv/config"
 
-import _Env, {cleanEnv, port, str, bool} from "envalid"
+import { z } from "zod"
 
-
-const env = cleanEnv(process.env, {
-	PORT: port({ default: 3333 }),
-	JWT_SECRET: str({ default: "secret123" }),
-	DEBUG: bool({ default: false })
+const schema = z.object({
+	PORT: z.number().default(3333),
+	JWT_SECRET: z.string().default("secret123"),
+	DEBUG: z.boolean().default(false)
 })
+
+const env = schema.parse(process.env)
 
 export default env
